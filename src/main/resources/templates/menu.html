@@ -10,7 +10,7 @@
 
 <div id = "clientProfile">
     <h2>My Profile</h2>
-    <p th:text="${name}"></p>
+    <p class="clientName" th:text="${name}"></p>
     <p th:text="${skintype}"></p>
     <p th:text="${manipedi}"></p>
 </div>
@@ -37,6 +37,49 @@
         <h3>Pedicure</h3>
         <p th:replace = "fragments :: pedicureDescription"></p>
     </div>
+
+    <div th:if="${manipedi} == 'both'">
+        <h3>Manicure</h3>
+        <p th:replace = "fragments :: manicureDescription"></p>
+        <h3>Pedicure</h3>
+        <p th:replace = "fragments :: pedicureDescription"></p>
+    </div>
 </div>
+
+
+<footer>
+    <div>
+        <h3>Available Nail Polish Colors</h3>
+        <table>
+            <tr>
+                <td>
+                    <div class="square" style="background-color: blue"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: red"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: purple"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: pink"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: green"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: yellow"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: aqua"></div>
+                </td>
+                <td>
+                    <div class="square" style="background-color: gray"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</footer>
+
 </body>
 </html>
