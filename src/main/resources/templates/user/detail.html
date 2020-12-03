@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>User ID</th>
+        <th>User Name</th>
+        <th>User Email</th>
+        <th>User Password</th>
+    </tr>
+    </thead>
+    <tr>
+        <td th:text="${user.id}"></td>
+        <!-- Thymeleaf will call event.getName() for the follow event.name -->
+        <td th:text="${user.username}"></td>
+        <!-- Thymeleaf will call event.getDescription() for the follow event.description -->
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.password}"></td>
+    </tr>
+</table>
+
+</html>

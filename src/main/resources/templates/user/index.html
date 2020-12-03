@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+    <a class="nav-link" th:href="@{'/'}">Return to Spa Service Selections</a>
+
+    <ul>
+        <th:block th:each="user : ${users}">
+            <li><a th:href="@{/user/detail/{id}(id=${user.id})}" th:text="${user.username}"></a></li>
+        </th:block>
+    </ul>
+
+</body>
+</html>
